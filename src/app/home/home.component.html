@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="item" *ngFor="let item of items; let i = index" (click)="i === 5 ? openDialog() : null">
+    <mat-card class="card item-card" [class.big-plus]="item.year === '+'">
+      <img mat-card-sm-image class="item-image" [src]="item.imageUrl" alt="{{item.year}}">
+      <mat-card-content class="item-content">
+        <p>{{item.year}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

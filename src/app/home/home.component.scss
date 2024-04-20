@@ -1,0 +1,27 @@
+.container {
+  width: 100rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  height: 200px;
+  margin: 10px;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-image {
+  width: 200px;
+  height: 150px;
+}
+
+.item-content {
+  width: 50%;
+}
