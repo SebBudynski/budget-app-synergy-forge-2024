@@ -7,3 +7,25 @@
     width: 80px;      
     height: auto;
  }
+
+ .header{
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .header-text{
+   color: white;
+ }
+
+ .purple-btn {
+   color: white;
+   background-color: purple; 
+ }
+ 
+ .purple-icon-btn {
+   color: purple; 
+ }
+
+ .container {
+   display: flex;
+}
