@@ -17,6 +17,7 @@ import { CategoryItem } from '../../../types';
 import { CategoryItemService } from '../../api/category-items.service';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-budget-page',
@@ -38,6 +39,7 @@ import { AsyncPipe } from '@angular/common';
 })
 export class CreateBudgetPageComponent {
   private readonly categoriesSerivce = inject(CategoryItemService);
+  private readonly router = inject(Router);
   form!: FormGroup;
   addCategoryForm!: FormGroup;
   categories$: Observable<CategoryItem[]> =
@@ -68,5 +70,9 @@ export class CreateBudgetPageComponent {
 
   handleSubmitAddCategoryForm(): void {
     this.categoriesSerivce.addCategoryItem(this.addCategoryForm.value);
+  }
+
+  handleCreate(): void {
+    this.router.navigateByUrl('/view3');
   }
 }

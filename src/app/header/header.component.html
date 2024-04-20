@@ -1,11 +1,12 @@
-
 <mat-toolbar class="header">
-  <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_345,h_180/https://synergycodes.com/wp-content/uploads/Forge_ProductDesign_Color_White.png" alt="Logo" />
-  <span *ngIf="isVisiable" class="header-text">Integration</span>
-  <div *ngIf="isVisiable">
-     <button mat-flat-button class="purple-btn">Zapisz</button>
-     <button mat-icon-button class="purple-icon-btn" aria-label="Open in new tab icon">
-        <mat-icon>open_in_new</mat-icon>
-     </button>
-  </div>
+   <img
+      src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_345,h_180/https://synergycodes.com/wp-content/uploads/Forge_ProductDesign_Color_White.png"
+      alt="Logo" />
+   <span *ngIf="isVisiable" class="header-text">Integration</span>
+   <div *ngIf="isVisiable">
+      <button mat-flat-button class="purple-btn" (click)="handleSave()">Zapisz</button>
+      <button mat-icon-button class="purple-icon-btn" aria-label="Open in new tab icon">
+         <mat-icon>open_in_new</mat-icon>
+      </button>
+   </div>
 </mat-toolbar>

@@ -27,6 +27,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   private integrationsService = inject(IntegrationsService);
+  private router = inject(Router);
 
   integrations$: Observable<Integration[]> =
     this.integrationsService.getIntegrations();
@@ -37,7 +38,8 @@ export class HomeComponent {
     this.dialog.open(ModalContentComponent);
   }
 
-  openPrvIntegration() {
+  openPrvIntegration(integrationId: number) {
     console.log('Navigating to integration');
+    this.router.navigateByUrl('/view3');
   }
 }

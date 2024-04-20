@@ -9,14 +9,17 @@ import { MatDialogRef } from '@angular/material/dialog';
   standalone: true,
   imports: [MatButtonModule, MatIconModule],
   templateUrl: './modal-content.component.html',
-  styleUrl: './modal-content.component.scss'
+  styleUrl: './modal-content.component.scss',
 })
-
 export class ModalContentComponent {
-  constructor(private router: Router, public dialogRef: MatDialogRef<ModalContentComponent>) {}
+  constructor(
+    private router: Router,
+    public dialogRef: MatDialogRef<ModalContentComponent>
+  ) {}
 
   newBudget() {
-    this.router.navigate(['/module1']);
+    this.router.navigate(['/create-budget']);
+    this.closeModal();
   }
 
   usePreviousBudget() {
@@ -24,6 +27,6 @@ export class ModalContentComponent {
   }
 
   closeModal() {
-   this.dialogRef.close();
+    this.dialogRef.close();
   }
 }
