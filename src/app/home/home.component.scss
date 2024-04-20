@@ -1,9 +1,9 @@
 .container {
-  width: 100rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 2rem;
 }
 
 .item {
@@ -24,4 +24,13 @@
 
 .item-content {
   width: 50%;
+}
+
+.item-content-plus {
+  width: 260px;
+  height: 80px;
+  text-align: center;
+  font-size: 48px;
+  margin-top: 40px;
+  cursor: pointer;
 }
