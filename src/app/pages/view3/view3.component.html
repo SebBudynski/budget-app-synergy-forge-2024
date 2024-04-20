@@ -1,0 +1,196 @@
+<div style="width: 50vw; height: 100%; border-radius: 5px; margin: 10px">
+    <h2 style="color: #785BAF">Wersja główna</h2>
+    <div style="background: white; display: flex; align-items: center; justify-content: space-between; width: 100%">
+     <div style="display: flex; align-items: flex-start; gap: 10px;">
+      <h2>Wersja 1</h2>
+      <i class="material-icons" style="color: #785BAF">edit</i>
+      <i class="material-icons" style="color: #785BAF">delete_outline</i>
+     </div>
+      <button mat-flat-button style="background: #785BAF; color: white; padding: 10px; border-radius: 20px;">Duplikuj wersję</button>
+    </div>
+  
+  <div style="margin-top: 10px; width: 100%; height: 30px; background: #EFEAF5;">
+  <div style="background-color: #785BAF; color:white; margin-top: 10px; width: 73%; height: 30px; display: flex; justify-content: center; align-items: center; ">73%</div>
+  </div>
+  <div style="box-shadow: 0px 5px 5px 5px grey; border-radius: 5px; margin-top: 20px">
+  
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header style="padding-left: 0; ">
+        <mat-panel-title style="width: 100vw">
+          <div style="display: flex; justify-content: space-between; align-items: center;width: 100%">
+            <div style="margin: 10px; border-radius: 15px; width: 100%">
+              <div style="display: flex; justify-content: flex-start;">
+                <div style="display: flex; width: 100%; margin-left: 5px; justify-content: space-between; ">
+                  <p>Hotel</p>
+                  <p>40% (4000 zł / 10000 zł)</p>
+                </div>
+              </div>
+              <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+            </div>
+            <button mat-mini-fab style="background: #785BAF; display: flex; margin-right: 5px; justify-content: center; align-items: center; border-radius: 30px; width: 30px; height: 30px;" aria-label="Example icon button with a menu icon">
+              <i class="material-icons" style=" color: white">add</i>
+            </button>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+     
+      <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; width: 100px">
+          <label for="myInput">Nazwa</label>
+          <input type="text" id="myInput" placeholder="Wymiana sali">
+        </div>
+        <div style="display: flex; flex-direction: column; width: 60px; margin-left: 10px">
+          <label for="myInput">Koszt</label>
+          <input type="text" id="myInput" placeholder="1000">
+        </div>
+  
+        <div style="display: flex; align-items: flex-end; text-align: center;">
+          <input type="checkbox" id="myCheckbox">
+  <label for="myCheckbox">Zaznacz to</label>
+  
+        </div>
+  
+        <div style="display: flex; align-items: flex-end; text-align: center;">
+          <button (click)="showAlert()"  style="cursor: pointer; background: #785BAF; color: white; display: flex; margin-left: 15px; justify-content: center; align-items: center; width: 50px; height: 30px;" aria-label="Example icon button with a menu icon">
+            ok
+          </button>
+        </div>
+      </div>
+  
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header style="padding-left: 0; ">
+        <mat-panel-title style="width: 100vw">
+          <div style="display: flex; justify-content: space-between; align-items: center;width: 100%">
+            <div style="margin: 10px; border-radius: 15px; width: 100%">
+              <div style="display: flex; justify-content: flex-start;">
+                <div style="display: flex; width: 100%; margin-left: 5px; justify-content: space-between; ">
+                  <p>Transport</p>
+                  <p>20% (2000 zł / 10000 zł)</p>
+                </div>
+              </div>
+              <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+            </div>
+            <button mat-mini-fab style="background: #785BAF; display: flex; margin-right: 5px; justify-content: center; align-items: center; border-radius: 30px; width: 30px; height: 30px;" aria-label="Example icon button with a menu icon">
+              <i class="material-icons" style=" color: white">add</i>
+            </button>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; width: 100px">
+          <label for="myInput">Nazwa</label>
+          <input type="text" id="myInput" placeholder="Wymiana sali">
+        </div>
+        <div style="display: flex; flex-direction: column; width: 60px; margin-left: 10px">
+          <label for="myInput">Koszt</label>
+          <input type="text" id="myInput" placeholder="1000">
+        </div>
+  
+        <div style="display: flex; align-items: flex-end; text-align: center;">
+          <input type="checkbox" id="myCheckbox">
+  <label for="myCheckbox">Zaznacz to</label>
+        </div>
+  
+        <div style="display: flex; align-items: flex-end; text-align: center;">
+          <button (click)="showAlert()"  style="cursor: pointer; background: #785BAF; color: white; display: flex; margin-left: 15px; justify-content: center; align-items: center; width: 50px; height: 30px;" aria-label="Example icon button with a menu icon">
+            ok
+          </button>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header style="padding-left: 0; ">
+        <mat-panel-title style="width: 100vw">
+          <div style="display: flex; justify-content: space-between; align-items: center;width: 100%">
+            <div style="margin: 10px; border-radius: 15px; width: 100%">
+              <div style="display: flex; justify-content: flex-start;">
+                <div style="display: flex; width: 100%; margin-left: 5px; justify-content: space-between; ">
+                  <p>Wyżywienie</p>
+                  <p>80% (8000 zł / 10000 zł)</p>
+                </div>
+              </div>
+              <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+            </div>
+            <button mat-mini-fab style="background: #785BAF; display: flex; margin-right: 5px; justify-content: center; align-items: center; border-radius: 30px; width: 30px; height: 30px;" aria-label="Example icon button with a menu icon">
+              <i class="material-icons" style=" color: white">add</i>
+            </button>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+  
+      <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column; width: 100px">
+          <label for="myInput">Nazwa</label>
+          <input type="text" id="myInput" placeholder="Wymiana sali">
+        </div>
+        <div style="display: flex; flex-direction: column; width: 60px; margin-left: 10px">
+          <label for="myInput">Koszt</label>
+          <input type="text" id="myInput" placeholder="1000">
+        </div>
+  
+        <div style="display: flex; align-items: flex-end; text-align: center;">
+          <input type="checkbox" id="myCheckbox">
+  <label for="myCheckbox">Zaznacz to</label>
+  
+        </div>
+  
+        <div style="display: flex; align-items: flex-end; text-align: center;">
+          <button (click)="showAlert()"  style="cursor: pointer; background: #785BAF; color: white; display: flex; margin-left: 15px; justify-content: center; align-items: center; width: 50px; height: 30px;" aria-label="Example icon button with a menu icon">
+            ok
+          </button>
+        </div>
+      
+      </div>
+  </mat-expansion-panel>
+  
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header style="padding-left: 0; ">
+        <mat-panel-title style="width: 100vw">
+          <div style="display: flex; justify-content: space-between; align-items: center;width: 100%">
+            <div style="margin: 10px; border-radius: 15px; width: 100%">
+              <div style="display: flex; justify-content: flex-start;">
+                <div style="display: flex; width: 100%; margin-left: 5px; justify-content: space-between; ">
+                  <p>DJ</p>
+                  <p>60% (6000 zł / 10000 zł)</p>
+                </div>
+              </div>
+              <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+            </div>
+            <button mat-mini-fab style="background: #785BAF; display: flex; margin-right: 5px; justify-content: center; align-items: center; border-radius: 30px; width: 30px; height: 30px;" aria-label="Example icon button with a menu icon">
+              <i class="material-icons" style=" color: white">add</i>
+            </button>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Memy to życie 😃</p>  
+      <img style="width: 50px; height: 50px;" src="assets/mem.jpg" alt="Nazwa obrazka">
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header style="padding-left: 0; ">
+        <mat-panel-title style="width: 100vw">
+          <div style="display: flex; justify-content: space-between; align-items: center;width: 100%">
+            <div style="margin: 10px; border-radius: 15px; width: 100%">
+              <div style="display: flex; justify-content: flex-start;">
+                <div style="display: flex; width: 100%; margin-left: 5px; justify-content: space-between; ">
+                  <p>Reklama</p>
+                  <p>60% (6000 zł / 10000 zł)</p>
+                </div>
+              </div>
+              <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+            </div>
+            <button mat-mini-fab style="background: #785BAF; display: flex; margin-right: 5px; justify-content: center; align-items: center; border-radius: 30px; width: 30px; height: 30px;" aria-label="Example icon button with a menu icon">
+              <i class="material-icons" style=" color: white">add</i>
+            </button>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>Zapraszamy na Meet JS - 23.05.2024 😃</p>  
+      <img style="width: 400px; height: 300px;" src="assets/z5.png" alt="Nazwa obrazka">
+    </mat-expansion-panel>
+  </div>
+  
