@@ -9,19 +9,27 @@ import { inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Integration } from '../../types';
 import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatListModule, ModalContentComponent, MatCardModule, AsyncPipe, MatIconModule],
+  imports: [
+    CommonModule,
+    MatListModule,
+    ModalContentComponent,
+    MatCardModule,
+    AsyncPipe,
+    MatIconModule,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-
 export class HomeComponent {
   private integrationsService = inject(IntegrationsService);
-  
-  integrations$ : Observable<Integration[]> = this.integrationsService.getIntegrations(); 
+
+  integrations$: Observable<Integration[]> =
+    this.integrationsService.getIntegrations();
 
   constructor(public dialog: MatDialog) {}
 
@@ -29,4 +37,7 @@ export class HomeComponent {
     this.dialog.open(ModalContentComponent);
   }
 
+  openPrvIntegration() {
+    console.log('Navigating to integration');
+  }
 }

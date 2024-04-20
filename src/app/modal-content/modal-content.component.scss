@@ -1,0 +1,28 @@
+.modal-content {
+  justify-content: space-around;
+  padding: 1rem;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+mat-icon {
+  margin-left: auto;
+}
