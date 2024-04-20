@@ -4,20 +4,19 @@ import { Observable } from 'rxjs';
 import { CategoryItem } from '../../types';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CategoryItemService {
-
   private readonly http = inject(HttpClient);
-  private apiUrl = 'https://team-02.forge-24.rnd.synergy.codes/api/category-items';
+  private apiUrl =
+    'https://team-02.forge-24.rnd.synergy.codes/api/category-items';
 
-
-  getCategoryItems() : Observable<CategoryItem[]>{
+  getCategoryItems(): Observable<CategoryItem[]> {
     return this.http.get<CategoryItem[]>(this.apiUrl);
   }
 
-  getCategoryItem(categoryItemId  : number) : Observable<CategoryItem>{
-    const url = `${this.apiUrl}/${categoryItemId}`
+  getCategoryItem(categoryItemId: number): Observable<CategoryItem> {
+    const url = `${this.apiUrl}/${categoryItemId}`;
     return this.http.get<CategoryItem>(url);
   }
 
@@ -25,13 +24,16 @@ export class CategoryItemService {
     return this.http.post<CategoryItem>(this.apiUrl, categoryItem);
   }
 
-  editCategoryItem(categoryItemId  : number, CategoryItem : CategoryItem) : Observable<CategoryItem>{
-    const url = `${this.apiUrl}/${categoryItemId}`
+  editCategoryItem(
+    categoryItemId: number,
+    CategoryItem: CategoryItem
+  ): Observable<CategoryItem> {
+    const url = `${this.apiUrl}/${categoryItemId}`;
     return this.http.patch<CategoryItem>(url, CategoryItem);
   }
 
-  deleteCategoryItem(categoryItemId  : number) : Observable<CategoryItem>{
-    const url = `${this.apiUrl}/${categoryItemId}`
+  deleteCategoryItem(categoryItemId: number): Observable<CategoryItem> {
+    const url = `${this.apiUrl}/${categoryItemId}`;
     return this.http.delete<CategoryItem>(url);
   }
 }
