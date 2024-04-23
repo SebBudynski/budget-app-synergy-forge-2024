@@ -1,15 +1,15 @@
 .modal-content {
   justify-content: space-around;
   padding: 1rem;
-  width: 400px;
+  width: 600px;
   height: 400px;
   display: flex;
   flex-direction: column;
 }
 
-.content{
+.content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2rem;
 }
 
@@ -19,10 +19,28 @@
   align-items: center;
 }
 
-img {
-  margin-bottom: 20px;
-}
-
 mat-icon {
   margin-left: auto;
 }
+
+mat-card {
+  margin-bottom: 1rem;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i {
+  margin-bottom: 20px;
+  font-size: 5rem;
+}
+
+button {
+  width: 200px;
+  font-size: 0.85rem;
+}
+
+
+
