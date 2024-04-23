@@ -1,17 +1,18 @@
 <div class="container">
-  <div class="item" *ngFor="let item of integrations$ | async; let i = index" (click)="i === 5 ? openDialog() : null">
-    <mat-card class="card" [class.big-plus]="item.name === '+'" (click)="openPrvIntegration(item.id)">
-      <img  [src]="item.picture" alt="{{item.name}}">
-      <mat-card-content>
-        <p>{{item.name}}</p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  <div class="item">
-    <mat-card class="card">
-      <mat-card-content class="plus" (click)="openDialog()">
+  <h1>Wybierz edycję integracji</h1>
+  <div class="wrapper">
+    <div class="item" *ngFor="let item of integrations$ | async; let i = index" (click)="i === 5 ? openDialog() : null">
+      <mat-card class="card" [class.big-plus]="item.name === '+'" (click)="openPrvIntegration(item.id)">
+        <img [src]="item.picture" alt="{{item.name}}">
+        <mat-card-content>
+          <p>{{item.name}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item">
+      <mat-card class="card plus" (click)="openDialog()">
         <i class="material-icons">add</i>
-      </mat-card-content>
-    </mat-card>
+      </mat-card>
+  </div>
   </div>
 </div>
