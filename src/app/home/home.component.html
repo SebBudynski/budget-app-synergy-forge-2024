@@ -1,15 +1,16 @@
 <div class="container">
   <div class="item" *ngFor="let item of integrations$ | async; let i = index" (click)="i === 5 ? openDialog() : null">
-    <mat-card class="card item-card" [class.big-plus]="item.name === '+'" (click)="openPrvIntegration(item.id)">
-      <img mat-card-sm-image class="item-image" [src]="item.picture" alt="{{item.name}}">
-      <mat-card-content class="item-content">
+    <mat-card class="card" [class.big-plus]="item.name === '+'" (click)="openPrvIntegration(item.id)">
+      <img  [src]="item.picture" alt="{{item.name}}">
+      <mat-card-content>
         <p>{{item.name}}</p>
       </mat-card-content>
     </mat-card>
   </div>
   <div class="item">
-    <mat-card class="card item-card big-plus">
-      <mat-card-content class="item-content-plus" (click)="openDialog()"> +
+    <mat-card class="card">
+      <mat-card-content class="plus" (click)="openDialog()">
+        <i class="material-icons">add</i>
       </mat-card-content>
     </mat-card>
   </div>
