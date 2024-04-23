@@ -39,7 +39,5 @@ export class HomeComponent {
   }
 
   openPrvIntegration(integrationId: number) {
-    console.log('Navigating to integration');
-    this.router.navigateByUrl('/view3');
   }
 }
